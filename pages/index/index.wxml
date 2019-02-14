@@ -11,7 +11,7 @@
     <text class="user-motto">{{motto}}</text>
   </view>
   <view class="location_map">
-   <map ></map>
+   <map class='map'></map>
   
   </view>
  

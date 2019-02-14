@@ -1,19 +1,20 @@
 {
   "pages": [
+    "pages/demo/demo",
     "pages/index/index",
     "pages/logs/logs",
     "pages/live/live"
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#888",
+    "navigationBarBackgroundColor": "#0b70ff",
     "navigationBarTitleText": "骚年的小木屋",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#888888",
-    "selectedColor": "#3F51B5",
+    "selectedColor": "#0b70ff",
     "borderStyle": "white",
     "position": "bottom",
     "list": [
@@ -24,11 +25,17 @@
         "selectedIconPath": "img/icon_home_selected.png"
       },
       {
+        "pagePath": "pages/demo/demo",
+        "text": "例子",
+        "iconPath": "img/icon_home.png",
+        "selectedIconPath": "img/icon_home_selected.png"
+      },
+      
+      {
         "pagePath": "pages/live/live",
         "text": "直播",
         "iconPath": "img/icon_live_streaming.png",
         "selectedIconPath": "img/icon_live_streaming_selected.png"
-       
       },
       {
         "pagePath": "pages/logs/logs",
