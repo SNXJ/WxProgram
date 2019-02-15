@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/demo/swiper/swiper",
     "pages/demo/demo",
     "pages/index/index",
     "pages/logs/logs",
+    "pages/demo/swiper/swiper",
     "pages/live/live"
    
   ],
