@@ -1,0 +1,48 @@
+/* pages/demo/swiper/swiper.wxss */
+
+/* .banner_img{
+  height: 150,
+  
+} */
+.switch_contain{
+  padding: 10rpx;
+  margin: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text_l{
+  align-content: center;
+  color:#0b70ff;
+  font-size: 16px;
+}
+.switch_r{
+ 
+  margin-right: 20rpx;
+}
+.text_slider{
+   align-content: center;
+  color:#0b70ff;
+  font-size: 16px;
+  margin-left: 25rpx;
+}
+/* .slider{
+block-size: 14px;
+
+} */
+.swiper_vertical{
+ 
+  padding: 20rpx;
+  flex-direction: column;
+  height: 80rpx;
+  align-items: center;
+  background-color: #eeeeee;
+}
+.swiper_vertical_text1{
+  color: #666666;
+  font-size: 16px;
+}
+.swiper_vertical_text2{
+  color: #666666;
+  font-size: 12px;
+}

@@ -1,34 +1,5 @@
 <!--pages/demo/demo.wxml-->
-<swiper 
-
-indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <!-- next-margin="10rpx"
-  previous-margin="10rpx" -->
-  <block wx:for="{{imgUrls}}" wx:key="*this">
-    <swiper-item>
-      <image  src="{{item}}"  class="slide-image" style="width: {{imageWidth}}px;" bindload="imageLoad"   mode="scaleToFill"/>
-    </swiper-item>
-  </block>
-</swiper>
-<view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
-  <view class="weui-cells weui-cells_after-title">
-    <view class="weui-cell weui-cell_switch">
-      <view class="weui-cell__bd">指示点</view>
-      <view class="weui-cell__ft">
-        <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
-      </view>
-    </view>
-    <view class="weui-cell weui-cell_switch">
-      <view class="weui-cell__bd">自动播放</view>
-      <view class="weui-cell__ft">
-        <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
-      </view>
-    </view>
-  </view>
-</view>
-
-<slider bindchange="intervalChange" show-value min="500" max="2000" /> 切换时长
-<slider bindchange="durationChange" show-value min="1000" max="10000" /> 播放间隔
+<button  class="button" bindtap='onSwiperTap'> swiper</button>
 
 
 <view class="page-section-spacing" style="margin-top:20px">

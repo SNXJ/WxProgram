@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/demo/swiper/swiper",
     "pages/demo/demo",
     "pages/index/index",
     "pages/logs/logs",
     "pages/live/live"
+   
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -30,7 +32,6 @@
         "iconPath": "img/icon_home.png",
         "selectedIconPath": "img/icon_home_selected.png"
       },
-      
       {
         "pagePath": "pages/live/live",
         "text": "直播",
