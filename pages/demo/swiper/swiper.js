@@ -1,58 +1,69 @@
-// pages/demo/demo.js
+// pages/demo/swiper/swiper.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
+    texts: [["标题1", "这是内容1"], ["标题2", "这是内容2"], ["标题3", "这是内容3"]],
+// texts: ["这是内容1", "这是内容2", "这是内容2"],
+    imageUrls: [
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550150535067&di=c4dedcc715b79a1dd122581706469aa4&imgtype=0&src=http%3A%2F%2Fwww.tiandiantong.net%2Fpublic%2Fsite%2Fnew%2Fimg%2FaboutUs%2Fabout-banner.jpg',
-      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550150535065&di=e14ff037a63546df962856efa113bc57&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F6b59fc7e3604f366c1ed95d94664feaa12e0cecf5c842-KSPJmT_fw658',
+      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550223661622&di=6eb30c4fef93a7ef6e183ad94851b088&imgtype=0&src=http%3A%2F%2Fpic2.ooopic.com%2F10%2F58%2F70%2F01b1OOOPIC34.jpg',
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550150535064&di=621486101b342914b49de94d84629f1d&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0139be5aa76ef0a801206d9606eaf8.png%401280w_1l_2o_100sh.png'
     ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 5000,
+    indicatorDots: false,
+    autoplay: false,
+    autoplay2:true,
+    vertical: false,
+    interval: 4000,
     duration: 1000,
-    circular: false,
-
+    imageWidth: ""
   },
   imageLoad: function() {
     this.setData({
-      imageWidth: wx.getSystemInfoSync().windowWidth, //图片宽度   
+      imageWidth: wx.getSystemInfoSync().windowWidth,
     })
-  },
-  onSwiperTap(e) {
-   
-wx.navigateTo({
-  url: '../demo/swiper/swiper',
-  success: function(res) {},
-  fail: function(res) {},
-  complete: function(res) {},
-})
 
   },
-  changeIndicatorDots(e) {
+
+  onIndicatorDots: function() {
     this.setData({
-      indicatorDots: !this.data.indicatorDots
+      indicatorDots: !this.data.indicatorDots,
     })
   },
-  changeAutoplay(e) {
+  onAutoPlay: function () {
     this.setData({
-      autoplay: !this.data.autoplay
+      autoplay: !this.data.autoplay,
     })
   },
-  intervalChange(e) {
+  onIndicatorDots: function () {
     this.setData({
-      interval: e.detail.value
+      indicatorDots: !this.data.indicatorDots,
     })
   },
-  durationChange(e) {
+  onVertical: function () {
     this.setData({
-      duration: e.detail.value
+      vertical: !this.data.vertical,
     })
   },
 
+  intervalChange:function(e) {
+    this.setData({
+      interval: e.detail.value,
+    })
+  },
+  durationChange: function (e) {
+    this.setData({
+      duration: e.detail.value,
+    })
+  },
+  /**
+   * 禁止手动滑动
+   */
+  stopTouchMove: function () {
+    return false;
+  },
   /**
    * 生命周期函数--监听页面加载
    */

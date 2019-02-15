@@ -1,8 +1,11 @@
 /* pages/demo/demo.wxss */
-
+.button{
+  background-color: #2782d7;
+  margin: 20rpx;
+  color: #f1f1f1;
+}
 .flex-wrp {
   display: flex;
-  color: #00f;
   width: 100%;
   flex-direction: row;
   flex-wrap: nowrap;

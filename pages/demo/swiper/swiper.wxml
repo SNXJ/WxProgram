@@ -1,0 +1,45 @@
+<!--pages/demo/swiper/swiper.wxml-->
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical='{{vertical}}'>
+  <block wx:for="{{imageUrls}}" wx:key="*this">
+    <swiper-item>
+      <image class="slide-image" src="{{item}}" style="width: {{imageWidth}}px;" mode="scaleToFill" bindload="imageLoad" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view>
+  <view class="switch_contain">
+    <text class="text_l">自动轮播</text>
+    <switch class="switch_r" bindchange="onAutoPlay" />
+  </view>
+  <view class="switch_contain">
+    <text class="text_l">显示dots</text>
+    <switch class="switch_r" bindchange="onIndicatorDots" />
+  </view>
+  <view class="switch_contain">
+    <text class="text_l">是否纵向</text>
+    <switch class="switch_r" bindchange="onVertical" />
+  </view>
+
+  <view class="slider_contain">
+    <text class="text_slider">切换时长(ms)</text>
+    <slider class="slider_" block-size='16' show-value min="1000" max="5000" value='{{interval}}' bindchange='intervalChange' />
+  </view>
+
+  <view class="slider_contain">
+    <text class="text_slider">时间间隔(ms)</text>
+    <slider class="slider_" block-size='16'show-value min="500" max="10000" value='{{duration}}' bindchange='durationChange' />
+  </view>
+
+</view>
+<swiper class="swiper_vertical"indicator-dots="{{false}}" autoplay="{{autoplay2}}" interval="{{interval}}" duration="{{duration}}" vertical="{{true}}" circular="{{true}}">
+  <block wx:for="{{texts}}" wx:key="*this">
+    <swiper-item catchtouchmove="stopTouchMove">
+    <view >
+     <view class="swiper_vertical_text1">{{item[0]}}</view>
+     <view class="swiper_vertical_text2">{{item[1]}}</view>
+     </view>
+    </swiper-item>
+  </block>
+</swiper>
