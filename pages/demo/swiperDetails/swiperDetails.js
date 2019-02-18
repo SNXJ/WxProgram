@@ -1,29 +1,29 @@
-// pages/demo/demo.js
+// pages/demo/swiperDetails/swiperDetails.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-
+    imageUrl: "",
+    width:0,
   },
-  onSwiperTap(e) {
-    wx.navigateTo({
-      url: '../demo/swiper/swiper',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
+  image_load: function() {
+    this.setData({
+      width: wx.getSystemInfoSync().windowWidth,
+
     })
-
   },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    console.log("imageUrl_加载:" + decodeURIComponent(options.imageUrl));
+    this.setData({
+      imageUrl: decodeURIComponent(options.imageUrl),
+    })
+    // 
   },
 
   /**

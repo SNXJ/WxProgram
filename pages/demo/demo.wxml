@@ -1,5 +1,7 @@
 <!--pages/demo/demo.wxml-->
 <button  class="button" bindtap='onSwiperTap'> swiper</button>
+<button  class="button" bindtap='onSwiperTap'> 列表</button>
+<button  class="button" bindtap='onSwiperTap'> 弹窗</button>
 
 
 <view class="page-section-spacing" style="margin-top:20px">

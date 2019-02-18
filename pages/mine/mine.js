@@ -1,23 +1,20 @@
-// pages/demo/demo.js
+// pages/mine/mine.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-
+    head: "../../img/head_def.png",
+    text1: ['积分商城', '快速了解', '在线客服', '分享领券'],
+    text2: ['版本检测', '帮助信息', '关于我们'],
+    images1: [
+      '../../img/mine_integral.png',
+      '../../img/mine_know.png',
+      '../../img/mine_service.png',
+      '../../img/mine_share.png',
+    ],
   },
-  onSwiperTap(e) {
-    wx.navigateTo({
-      url: '../demo/swiper/swiper',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
-
-  },
-
 
   /**
    * 生命周期函数--监听页面加载

@@ -1,9 +1,15 @@
 <!--pages/demo/swiper/swiper.wxml-->
 
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical='{{vertical}}'>
+<swiper indicator-dots="{{indicatorDots}}"
+ autoplay="{{autoplay}}" 
+ interval="{{interval}}" 
+ duration="{{duration}}" 
+ vertical='{{vertical}}' 
+ bindchange='bindchange' 
+ current='{{currentIndex}}'>
   <block wx:for="{{imageUrls}}" wx:key="*this">
     <swiper-item>
-      <image class="slide-image" src="{{item}}" style="width: {{imageWidth}}px;" mode="scaleToFill" bindload="imageLoad" />
+      <image class="slide-image" bindtap="onBannerTap" src="{{item}}" style="width: {{imageWidth}}px;" mode="scaleToFill" bindload="imageLoad" />
     </swiper-item>
   </block>
 </swiper>
@@ -29,17 +35,17 @@
 
   <view class="slider_contain">
     <text class="text_slider">时间间隔(ms)</text>
-    <slider class="slider_" block-size='16'show-value min="500" max="10000" value='{{duration}}' bindchange='durationChange' />
+    <slider class="slider_" block-size='16' show-value min="500" max="10000" value='{{duration}}' bindchange='durationChange' />
   </view>
 
 </view>
-<swiper class="swiper_vertical"indicator-dots="{{false}}" autoplay="{{autoplay2}}" interval="{{interval}}" duration="{{duration}}" vertical="{{true}}" circular="{{true}}">
+<swiper class="swiper_vertical" indicator-dots="{{false}}" autoplay="{{autoplay2}}" interval="{{interval}}" duration="{{duration}}" vertical="{{true}}" circular="{{true}}">
   <block wx:for="{{texts}}" wx:key="*this">
     <swiper-item catchtouchmove="stopTouchMove">
-    <view >
-     <view class="swiper_vertical_text1">{{item[0]}}</view>
-     <view class="swiper_vertical_text2">{{item[1]}}</view>
-     </view>
+      <view>
+        <view class="swiper_vertical_text1">{{item[0]}}</view>
+        <view class="swiper_vertical_text2">{{item[1]}}</view>
+      </view>
     </swiper-item>
   </block>
 </swiper>
