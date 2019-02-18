@@ -10,21 +10,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
-/* .slide-image{
-width: 1500rpx,
-height:500,
-} */
-.weui-cell_switch {
-  margin: 20rpx;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.weui-cell__ft {
-  margin-right: 50rpx;
-}
 
 .flex-item {
   height: 100px;

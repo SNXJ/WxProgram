@@ -1,0 +1,4 @@
+<!--pages/demo/swiperDetails/swiperDetails.wxml-->
+<image
+class='image_detail'
+ src="{{imageUrl}}" mode='scaleToFill' style='width:{{width}}px' bindload='image_load'></image>

@@ -1,0 +1,35 @@
+<!--pages/mine/mine.wxml-->
+
+<scroll-view class='scroll'>
+
+  <view class="top_contain">
+    <view class="clum_contain">
+      <image class="head_img" src="{{head}}"></image>
+      <text class="login_text">登录/注册</text>
+    </view>
+  </view>
+
+
+  <!-- <view class="middle_contain" wx:for="{{[0,1,2,3]}}" wx:key="*this"> -->
+  <view class="middle_contain">
+
+    <view class="middle_clum_contain" wx:for="{{images1}}" wx:key="*this">
+      <image class="middle_img" src="{{item}}"></image>
+      <text class="middle_text">{{text1[index]}}</text>
+    </view>
+
+  </view>
+
+
+
+
+  <view class='bottom_view'>
+    <view class='bottom_item' wx:for="{{text2}}" wx:key="*this">
+      <text class="bottom_text">{{item}}</text>
+      <icon class="bottom_icon" type='info' size='23' color="#0b70ff"></icon>
+    </view>
+
+
+  </view>
+
+</scroll-view>
