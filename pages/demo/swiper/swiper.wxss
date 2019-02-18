@@ -4,6 +4,9 @@
   height: 150,
   
 } */
+page{
+  background-color: white;
+}
 .switch_contain{
   padding: 10rpx;
   margin: 15rpx;
