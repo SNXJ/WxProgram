@@ -1,30 +1,16 @@
-// pages/mine/mine.js
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    head: "../../img/head_def.png",
-    text1: ['积分商城', '快速了解', '在线客服', '分享领券'],
-    text2: ['版本检测', '帮助信息', '关于我们'],
-    images1: [
-      '../../img/mine_integral.png',
-      '../../img/mine_know.png',
-      '../../img/mine_service.png',
-      '../../img/mine_share.png',
-    ],
-  },
-  toLogin:function(){
 
-    wx.navigateTo({
-      url: '../login/login',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
   },
-
+  bindSubmit: function(e) {
+    console.log("表单数据电话：" + e.detail.value.phone);
+    console.log("表单数据密码：" + e.detail.value.password);
+  },
   /**
    * 生命周期函数--监听页面加载
    */

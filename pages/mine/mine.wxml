@@ -3,7 +3,7 @@
 <scroll-view class='scroll'>
 
   <view class="top_contain">
-    <view class="clum_contain">
+    <view class="clum_contain" bindtap='toLogin'>
       <image class="head_img" src="{{head}}"></image>
       <text class="login_text">登录/注册</text>
     </view>

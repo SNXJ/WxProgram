@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<form bindsubmit='bindSubmit'>
+  <view class="view_contain">
+
+    <input  name="phone" class='input' type="number" maxlength='11' focus='true'  placeholder="请输入手机号">
+    </input>
+
+    <input name="password" class='input password' type="text" maxlength='18' focus='true' password='true' placeholder="请输入密码">
+    </input>
+
+
+    <button form-type='submit'  class="btn_login"> 点击登录</button>
+  </view>
+
+
+</form>
